@@ -1,0 +1,116 @@
+REST web services
+works on Request and response concept (HTTP)
+
+CRUD operations (Create(POST), Retreive(GET), Update(PUT), Delete(Delete))
+
+Request parameters: URI, Headers, Payload(JSON/XML)
+
+Response parameters: Status, Response payload, String message (successful, unsuccessful)
+
+1. Create an account:--- POST call
+>>URI
+>>JSON/XML
+Account ID="12"
+Ac Name="name"
+etc
+
+"POST call is used to create a new entity"
+
+2. Get an account by ID/name:--- GET call
+>>URI 
+>>Path parameter
+>>Query Parameter
+>>Headers
+No Payload required
+
+"GET call is used to retreive the existing data"
+
+3. Update an Account: ---PUT call
+ex: Account ID="12"
+Name="name2"
+etc
+
+"PUT call is used to create and new account + update an existing account"
+
+4. Delete an account: --- Delete call
+
+"Delete call is used to delete any entity"
+
+Response codes:
+
+200: Ok 
+201: Created successfully
+400: Unsuccessful/ bad request
+404: System doesnt have the particular entity (Not Found)
+401: Unathorised Request
+403: Forbidden 
+500: Internal server error
+
+
+REST Client
+To test the web services we have few client where we can test the webservices API, Example:
+Postman, SOAP(REST,SOAP), Browsers, etc.
+
+Test REST API webservices--> http://regres.in
+
+above is the end point URL (Ex: http://regres.in/)
+
+when the endpoint url is concatinated with API service url makes URI ex:
+(http://regres.in/updateUser/)  --> URI
+
+?: to filter the result in REST response we use ? (Query Parameter)
+Ex. https://regres.in/api/Users?Page=2      Page: Query Parameter, 2 Query value
+/: means Path parameter
+
+POST call:
+
+I/p req (JSON):
+
+{
+"name": "Karan",
+"Post": "Engineer"
+}
+
+PUT call is the same but updating the existing parameters
+
+Ex:
+{
+"name": "Sandeep",
+"Post": "QA Engineer"
+}
+
+
+Delete :
+
+https://regres.in/api/users/2
+
+delete the user having id=2
+
+Swagger: it is API documentation tool to design the API documentation
+In swagger we can hit the API and get the response
+It is designed by the Developers 
+
+Ex: PayTM is totally dependent on webservices, transactions are also dependent on third party apps
+
+This is a kind of Integration Testing.
+
+Rest API Online Practice Examples:
++ https://reqres.in/
+
++ http://www.groupkt.com/post/c9b0ccb9/...
+
++ Swagger API Doc: 
+http://fakerestapi.azurewebsites.net/...
+
++https://resttesttest.com/
+
+
+
+
+
+
+
+
+
+
+

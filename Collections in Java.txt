@@ -1,0 +1,234 @@
+Collections Basics in Java
+
+- Collections: It is basically a framework which provides an architecture to store and manipulate the data/group of Objects 
+ without applying any further complex logics into the program.
+
+(i.e., search, sort, Insertion, deletion, etc)
+
+Classes and interfaces under Collections:
+
+- Intefaces- Set, List, Queue, Dequeue
+- Classes- ArrayList, Vector, LinkedList, PriorityQueue, TreeSet, hashSet
+
+Entire Collections is present in a package inside JDK called java.util package
+
+Interface to inteface and class to class extends each other
+
+Class implements Interface
+
+
+
+
+
+LinkedList
+	
+it implements List and Dequeue
+
+it stores on the basis of reference data as well as reference node
+
+head 
+
+first node:
+data, next
+
+node:
+data, next
+
+null
+
+
+Types:
+
+Single Linked List
+
+LinkedList<String> ll=new LinkedList<String>();
+
+ll.add("Karan");
+
+
+sysout(ll); //print the content of LinkedList
+
+ll.addFirst();
+ll.addLast();
+ll.get(Index);//0,1,2...
+ll.set(index, element);
+ll.remove(index);
+ll.removeLast()/First();
+
+
+Printing content using:
+
+1.For Loop
+2.Advanced For loop
+3.while Loop
+4.Iterator
+
+for(int i=0;i<ll.size();i++)
+sysout(ll.get(i));
+
+
+for(str::ll)
+sysout(str);
+
+
+Iterator <String> i=ll.Iterator();
+while(i.hasNext()){
+String s=i.next();
+sysout(s);
+}
+
+
+while(i<ll.size())
+{
+sysout(ll.get(i));
+i++;
+}
+
+
+
+Map Interface in Collection
+
+- in map we store the values on the basis of key and value
+-function used: .get(k/v), .put(k,v)
+
+Ex: Map of zip codes, Error Codes: (404, "fatal error"), map of managers and employees 
+Ex: configuration environment variables, headers in REST API, Test Data storage
+
+methods: 
+-put
+-putall
+-get(k)
+-containsKey(k)
+-remove(k)
+-keySet() : It'll give complete view
+-EntrySet()
+
+
+HashMAp
+-Implements Map interface
+-Contain only unique value
+-maintain no order 
+-data stored in key and value pair
+-can have one or multiple null value
+-extends abstractMap
+-*(it is non synchronised (multithreading environment so it can be accessed by all the threads so it will fasten the execution) {superior to hash table})
+-due to it "Fail Fast Condition": simultaneosuly if map structure is updated by multiple threads using the same object
+-concurrent modification exception
+-concurrent hashMap used to avoid fail fast
+
+
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1, "Karan");
+hm.put(2, "zxcf");
+
+sysout(hm.get(1));
+ how to print all element of hashmap
+
+for(Entry m: hm.entrySet())
+{
+sysout(m.getkey()+ " " + m.getvalue());
+}
+
+hm.remove(2);
+sysout(hm);
+
+
+for Objects
+
+Class Student{
+int rollno;
+String name;
+String class;
+
+Student(int rollno, String name, String class){
+this.rollno=rollno;
+this.name=name;
+this.class=class;
+}
+
+
+HashMap<Integer, String> mm=new HashMap<Integer, String>();
+
+Student s1=new Student(11, 'Karan', 'first');
+Student s2=new Student(12, "Sandeep, 'second');
+Student s3=new Student(13, 'Abiraka','third');
+
+mm.put(1,s1);
+mm.put(2,s2);
+mm.put(3,s3);
+
+//traversing
+
+for(Entry<Integer, String> x:mm.entrySet()){
+int k=x.getkey();
+
+Student s=x.getvalue();
+sysout(k+"student info"+s.rollno + s.name + s.calss);
+}
+
+
+
+
+
+HashTable
+-It is similar to HashMap but it is Synchronised
+-It also stores values on the basis of key and value pair
+-key--> Object --HashCode-->value (unique)
+-HashCOde is a java object number(unique) 32bit Signed Integer number
+-JVM will assign the number to the particular object
+-If two objects are equal the HashCode will get equal (hence not actually equal)
+-Synchronized (i.e, Thread safe)-one by one thread can access the object //Sequential threading
+-it'll automatically remove the duplicates
+-It cannot have no null key and value
+will get null pointer Exception
+
+Hashtable h1=new Hashtable();
+h1.put(1, "asdas");
+Hashtable h2=new Hashtable();
+h2=(Hashtable)h1.clone();//clone a object
+
+sysout(h1);
+sysout(h2);
+
+h1.clear();/to delete all the values from hashtable
+
+st.contains(value)
+how to iterate from Hashtable  --Enumeration --- elements()
+
+Hashtable st=new Hashtable();
+Enumeration e= st.elements();
+
+while(e.hasMoreElements()){
+sysout(e.nextElement());
+}
+
+
+using EntrySet()
+
+Set e=st.entrySet();
+sysout(s);
+
+
+
+
+if(st.equals(st1))
+sysout("Both hashtable are equal");
+
+//get value from a specified key
+
+sysout(st1.get("A"));
+//get the hashcode value of any object
+sysout(st1.hashcode);
+
+
+
+generics can also be defined
+
+Hashtable<String, String> htt=new Hashtable<String, String>();
+
+
+
+
+
+
+

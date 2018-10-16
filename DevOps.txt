@@ -1,0 +1,164 @@
+Dev Ops is methodology
+
+Development team and Operations team
+
+Plan>Code>Build>Test 
+
+Deploy>Operate>Monitor
+
+chef: Configuration management tool (Master Slave architecture to maintain the previous build)
+
+Jenkins: Integration management tool(Heart of DevOps)
+All phases are integrated using this...
+
+It pick the source code(after any change) from shared repo and prepare a build and post it will deploy it to test and prod env.
+
+CI/CD: COntinous Integration/ Continous Development(deployment to every env) ||not a good practice
+
+COntinous deleivery (Pipeline)
+
+Devops can be considered as the complimentary part of the agile methodology
+
+>development to rollback automated
+
+Testing is most imp part of CI/CD
+
+since post automation test suite created should be run by QA 
+
+QA comes at prime level and to be tested by a QA person from each perspective from building and completing a automation suite and to continous run the suite each time a deplooyment happens
+we can hand it over to the Continous intgration itself.
+
+
+
+DevOps integrates Development and Operation teamsin order to improve collaboration and productivity by:
+- Automating infrastructure
+- Automating workflows and
+- Continously measuring application performance (code coverage, stress handling, no. of connections, RAM utilisations, etc)
+
+DevOps solutions for various challenges like: Waiting time for  Code deployment, Pressure of work on old, pending and new code: 
+
+CI(COntinous Integration) which ensures there is quick deployment of code, faster testing and speedy feedback mechanism. hence, there is no waiting time for code deployment Dev guy can focus on building current code
+
+CI/CD: It is continously integrating the code with the existing one so that it doesn't break using some automation tools.
+
+how CI deals with various challenges:
+1. Managing the application uptime: COntainerization/Virtualization : It ensures there is a  simulated env  created to run the software
+2. Tools to automate infrastructure management is not effective: COnfiguration Management: It helps to organize  and execute config. plans, consistently provision the system, and proactively manages their infrastrucutre (integrating diferent tools)
+3. No. of servers to be monitored, Difficulty in diagnostics: Continous monitoring: Using tools continous monitoring(eg, nagios)
+
+
+
+Documentation: Chef is easy
+Tools:
+Version control: Git
+Continous integration: Jenkins
+Virtualisation/Containerisation: Docker
+Config Management:Puppet,
+Monitoring- Nagios
+
+Pipeline(It can only be stopped wont leave the pipeline it is just a code filtering):
+SCM(Source code management: GIT, CVS,etc)>Unit Testing(JUnit)( Selenium, Cucumber)
+
+
+automate the hierarchy cycle
+Branching your code (Branch specific change)
+
+Jenkins:
+After code commit we have the tools called jenkins which handles automation
+
+It is just a framework which will help automating things using plugins
+1. It helps developers to integrate changes to the project
+2.Users to obtain a fresh build 
+
+Jenkins only uses the command which is manual and can be automated
+It can be used for:
+
+Pulling
+Building
+Deploying
+Testing
+Pushing as release
+Deploying in production(not recommended)
+
+
+Thinking like a computer scientist in Python Book
+
+Continous Testing Selenium
+Test Scripts
+WebDriver
+Browser
+
+Continous Deployment:
+Config management(Chef) for (container/VM)
+Container Virtualization
+
+Continous monitoring(It checks whether the application is stable or unstable)
+Nagios
+
+Load testing is challenge in DevOps
+
+COntainer vs VMs
+multiple containers can share same OS kernel (multi-tasking)
+
+
+Build Tools- GIT and Jenkins
+Automate things using DOckers
+
+Config management tool is also used for managing the VM or shell commands as these are complicated so to configure any VM we would be using the management tool which can handle this.
+
+
+Code -> Git (for pushing the code out) ->Continous Integration(done using Jenkins) -> COntinous Deployment (done using Docker on containers in the Ubntu machines {can be mulitple in lower env}) [we can't have mulitple machines sharing responsibility like Jenkins can't share resp. with puppet master]
+  -> continous testing (using jenkins and on test VM) ->
+
+
+
+Definition of DevOps:
+
+DevOps is basically a software development methodology which involves:
+Continous Development
+Continous Testing
+Continous Integration
+COntinous Deployment
+Continous Monitoring
+of the software  throught in the software development lifecycle
+
+
+
+Plan > COde > Build > Test {Integration} Deployment > Operate > Monitor
+
+COntinous testing involves tools like : TestNG, Selenium, Jennkins(to perform continous testing)
+
+Steps:
+1. Create test cases with Selenium on Eclipse IDE
+2. Convert into testNG xml files
+3. to create a testng file which is having a executable batch file is required
+4. build job by executing the batch file
+5. Schedule job and configure Email notification
+
+
+To run a testng file through batch  use below:
+java -cp Java_workspace_\bin_path;Java_workspace_lib\* org.testng.TestNG <filename>
+
+cp: classpath
+
+or simply if u run from the folder where the dependencies are there we can use below command:
+java -cp bin;lib/* org.testng.TestNG testng.xml
+
+
+save it as : 'karbatch.bat'
+
+directory: name of the path of testng
+command: karbatch.bat 
+email: recipient
+configuration maintain smtp.gmail.com
+
+
+
+
+
+
+
+
+
+
+

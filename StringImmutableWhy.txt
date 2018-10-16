@@ -1,0 +1,23 @@
+Why String is Immutable??
+
+1.String Pool in Method Area
+2.String is most frequent data type: So they need to optimize
+3. If we have a string value for multiple object reference so it'll not create new memory for each value again and again
+Ex.: String s1="Java"; String s2="Java"    => here "Java" value will be used by both s1 and s2;
+
+4.Now in above example if String is mutable and we change "Java" from one of the object to another i.e, "C++" let say so it will also get changed for other 
+object which user dont want Hence, String is always final and immutable in JAva.
+
+5. To provide the security as well String are immutable and final
+
+6.Class loading mechanism
+7.Optimization and performance
+8. Wrapper classes: Integer, Long, Double, Float are also final and immutable
+
+
+
+
+Security: parameters are typically represented as String in network connections, database connection urls, usernames/passwords etc. If it were mutable, these parameters could be easily changed. 
+Synchronization and concurrency: making String immutable automatically makes them thread safe thereby solving the synchronization issues. 
+Caching: when compiler optimizes your String objects, it sees that if two objects have same value (a="test", and b="test") and thus you need only one string object (for both a and b, these two will point to the same object). 
+Class loading: String is used as arguments for class loading. If mutable, it could result in wrong class being loaded (because mutable objects change their state).

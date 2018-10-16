@@ -1,0 +1,53 @@
+Java Memory:
+
+It is divided into heap, stack memory, Permanent generation.
+
+1.Heap Memory: 
+
+-It stores Class objects
+-Stores JRE classes
+-Garbace collector runs on heap memory to free some memory by destroying some objects which doesnt have any references.
+
+It is divided further:
+
+	a. Young Generation  : Divided further: Eden memory (For storing new Objects), Survivor memory S0, survivor memory s1
+	b. Old Generation
+	c. Memory Pool: Used to store Immutable Objects (String class, pool) defined at the runtime by JVM memory managers
+	d. 
+
+
+when the new object is completely filled in eden memory, Garbage collector mechanism will be called.
+Minor GC will be performed.
+
+this will move all the objects to survivor memory S0 then to S1
+GC1, GC2, GC3 are been called by JVM
+
+garbage collector are used to free some memory by shifting the objects from eden to survivor s0 => S1 inside Young generation
+
+Once the Young genration memory is also full the object are moved to Old generation by JVM using GC
+
+When Old generation also filled up Major GC is called by JVM this takes long time.
+
+Hence, less Object should be used as per the memory management
+
+sometime we get timeout execption due to high cpu utilization which is actually carrying Major GC.
+
+
+2. Permanent Generation: It stores the mataData of classes/methods/etc
+not part of Heap memory
+it will be generated at runtime
+It contains method area for static, constants, class structure
+Runtime constant Pool: It is inside method area to store static and constant variables
+
+
+3.Java Stack Memory
+
+-It is used for thread execution
+-It contains method specific values like (local variables, references, method block  etc)
+-It also contains object references which are referening some objects in heap memory
+-Stores on the basis of LIFO concepts
+
+-Size is less compare to heap memory
+-Permanent Generation inside stack memory
+
+
