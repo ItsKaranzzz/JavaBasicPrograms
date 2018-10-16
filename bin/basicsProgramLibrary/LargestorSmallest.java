@@ -1,0 +1,62 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LargestorSmallest {
+
+	public static void main(String[] args) {
+
+		int arr[] = { 12, 43, 33, 55, 64, 11, 9 };
+
+		int max = arr[0];
+		int min = arr[0];
+
+		for (int i = 1; i < arr.length; i++) {
+
+			if (max < arr[i])
+				max = arr[i];
+			else if (min > arr[i])
+				min = arr[i];
+		}
+
+		System.out.println("Largetst: " + max + "  Minimum :" + min);
+
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+		// Swapping without using 3rd variable
+
+		int a = 12, b = 30;
+		a = a + b; // 42
+		b = a - b; // 12
+		a = a - b;
+
+		System.out.println(a + " " + b);
+
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+
+		System.out.println(a + " " + b);
+
+		a = a * b; // 360
+		b = a / b; // 12
+		a = a / b;
+
+		System.out.println(a + " " + b);
+
+		String x = "Karan";
+		String y = "Chaudhary";
+		
+		x=x+y;//KaranChaudhary
+		y=x.substring(0,x.length()-y.length()); //Karan
+		x=x.substring(y.length());
+		
+		System.out.println(x+"  "+y);
+		
+		String k="Karan";
+		String m="Karan";
+		System.out.println(k+" "+m);
+
+
+	}
+
+}
