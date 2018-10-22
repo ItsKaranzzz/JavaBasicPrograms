@@ -1,0 +1,13 @@
+git config --global user ""
+git config --global email ""
+git config --list
+git add . (all content of current folder)
+git commit -m "asdasd"  (Saving the project for sometime)
+git status
+git log
+git log --author="Buck"
+
+
+Working copy / Staging area /repository
+
+git diff --staged

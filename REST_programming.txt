@@ -1,0 +1,52 @@
+REST web services using JAVA
+
+-Create a maven project
+-Add the dependencies 
+	httpclient library
+	httpcore library
+	json API library
+	testng library
+-packages: 
+	com.qa.base
+	com.qa.config
+	com.qa.client
+	com.qa.testBase	
+
+config file contains:
+URL
+service API URL
+
+
+base class:
+-constructor: to read the config prop file	
+
+
+client:
+from here we'll call all the REST operations
+1. GET method:-
+
+-create default client
+-get URL
+-Execute client with url
+-get status code 
+-get Entity (whole response)
+-convert into JSON
+-get all header
+-print all headers
+
+
+testBase:
+testClass
+
+@BeforeMethod
+calling properties /initializing properties file
+create a URI out of two urls from properties file
+
+@Test
+getAPITest()
+-test the three elements of response i.e.,:
+
+	-status
+	-header
+	-body
+

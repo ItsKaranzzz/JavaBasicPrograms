@@ -1,0 +1,104 @@
+Abstraction
+
+Abstract class
+
+
+
+public abstract class Bank{
+
+//hiding the implementation logic
+//partial abstraction (coz: we have both abstract and non abstract methods)
+
+//atleast one method should be ther which is abstract in nature>
+
+//abstract method
+
+public abstract void load();  //abstract method it wont have any method body/definition
+
+//we can not create the object of abstract class
+// we can have multiple abstract or non abstract method
+//static and non static variables can be defined
+
+
+public void debit(){
+sysout("xyz");
+}
+
+
+
+
+}
+
+public class HDFCBank extends Bank{
+
+public void loan(){
+sysout("Loan according to hdfc");
+
+}
+
+}
+
+public class test{
+
+psvm(){
+
+HDFCBank hb=new HDFCBAnk();
+hb.loan();
+hb.load();
+hb.debit();
+Bank b=new HDFCBank();  //Dynamic binding
+
+}
+
+
+
+Interface 
+
+//full abstraction
+//no method body
+//only and only method declaration
+//Always define only abstract methods
+//no need to specifically write abstract keyword
+//we can not create the object of interface
+//Only final and static variables can be defined (by default)
+
+public interface Vehicle{
+
+public void start();
+public void stop();
+public void openMirror();
+
+}
+
+public class Car implements vehicle{
+
+public void start(){
+sysout("started");
+}
+public void stop(){
+sysout("stopped");
+}
+
+
+
+
+public void openMirror(){
+sysout("opened");
+}
+
+}
+
+
+public class test{
+
+
+psvm(){
+
+
+
+
+}
+}
+
+
+child class method called by parent class/interface instant is called Dynamic polymorphism
